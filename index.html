@@ -11,15 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body class="page">  
+    <header class="header">
+        <h1 class="header__title">Últimas noticias de IA</h1>
+        <div class="header__controls">
+                <div class="control-group">
+                    <label for="color-picker">Cor:</label>
+                    <input type="color" id="color-picker" name="color-group__input" value="#000000">
+                </div>
 
 
-    <p class="p1">TESTE</p>
-    <p class="p2">TESTE</p>
-    <p class="p3">TESTE</p>
-    <span class="material-icons homem">man</span>
+            <div class="control-gorup">
+                <label for="font-size">Tamanho da fonte:</label>
+                <select id="font-select" class="control-group__select">
+                    <option value="Roboto">Roboto</option>
+                    <option value="Open Sans" selected>Open Sans</option>
+                    <option value="Montserrat">Montserrat</option>
+                </select>
 
+            </div>
+            <button id="theme-toggle" class="header__theme-toggle">
+                <span class="material-icons">dark_mode</span>
+            </button>
+        </div>
+    </header>
 
+    <main class="main">
+
+    </main>
 
     <script src="script.js"></script>
 </body>
