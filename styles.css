@@ -1,21 +1,29 @@
+
+:root{
+    --primary-color: #3498db;
+    --text-color: #333;
+    --bg-color: #fff;
+    --font-family: 'Roboto', sans-serif;
+}
 *{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
 }
-.p1{
-    font-family: "Roboto", sans-serif;
+.page{
 
 }
 
-.p2{
-    font-family: "Montserrat", sans-serif;
+.header{
+
 }
 
-.p3{
-    font-family: "Open Sans", sans-serif;
+.header__controls{
+
+}
+/* quando o body tiver a classe dark */
+body.dark{
+    --text-color: #flflfl;
+    --bg-color: #121212;
 }
 
-.homem{
-    color: red;
-}

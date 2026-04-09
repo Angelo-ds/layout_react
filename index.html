@@ -6,40 +6,81 @@
     <title>Noticias IA</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="script.js"defer></script>
 </head>
 <body class="page">  
     <header class="header">
         <h1 class="header__title">Últimas noticias de IA</h1>
+
         <div class="header__controls">
                 <div class="control-group">
                     <label for="color-picker">Cor:</label>
-                    <input type="color" id="color-picker" name="color-group__input" value="#000000">
+                    <input type="color" id="color-picker" name="control-group__input" value="#000000">
                 </div>
 
 
-            <div class="control-gorup">
-                <label for="font-size">Tamanho da fonte:</label>
-                <select id="font-select" class="control-group__select">
-                    <option value="Roboto">Roboto</option>
-                    <option value="Open Sans" selected>Open Sans</option>
-                    <option value="Montserrat">Montserrat</option>
+                <div class="control-group">
+                    <label for="font-size">Tamanho da fonte:</label>
+                    <select id="font-select" class="control-group__select">
+                        <option value="Roboto">Roboto</option>
+                        <option value="Open Sans" selected>Open Sans</option>
+                        <option value="Montserrat">Montserrat</option>
                 </select>
 
+                <div class="control-group">
+                    <label for="article-color-picker">Cor dos Artigos:</label>
+                    <input type="color" id="article-color-picker" name="control-group__input" value="#000000">
+                </div>
+
             </div>
+
             <button id="theme-toggle" class="header__theme-toggle">
                 <span class="material-icons">dark_mode</span>
+                <span class="material-icons">download</span>
+                <span class="material-icons">light_mode</span>
             </button>
+
         </div>
+
     </header>
 
     <main class="main">
+        <article class="news">
+
+            <h2 class="news__title">Correto</h2>
+            <p class="news__content">Ia</p>
+        </article>
+
+
+        <article class="news">
+            <h2 class="news__title">Exato</h2>
+            <p class="news__content">ISso</p>
+        </article>
+
+
+        <article class="news">
+            <h2 class="news__title">Legal</h2>
+            <p class="news__content">Aham</p>
+        </article>
+
+
+        <article class="news">
+            <h2 class="news__title">Pode</h2>
+            <p class="news__content">Positivo</p>
+        </article>
+
+
+        <article class="news">
+            <h2 class="news__title">No puedes</h2>
+            <p class="news__content">Test</p>
+        </article>
 
     </main>
 
-    <script src="script.js"></script>
+
 </body>
 </html>
