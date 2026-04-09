@@ -4,14 +4,18 @@
     padding: 0;
 }
 .p1{
-    font-family: "Roboto"
+    font-family: "Roboto", sans-serif;
 
 }
 
 .p2{
-    font-family: "Montserrat"
+    font-family: "Montserrat", sans-serif;
 }
 
 .p3{
-    font-family: "Open Sans"
+    font-family: "Open Sans", sans-serif;
+}
+
+.homem{
+    color: red;
 }
