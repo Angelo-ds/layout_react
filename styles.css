@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+.p1{
+    font-family: "Roboto"
+
+}
+
+.p2{
+    font-family: "Montserrat"
+}
+
+.p3{
+    font-family: "Open Sans"
+}
