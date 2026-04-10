@@ -34,14 +34,19 @@ articleColorPicker.addEventListener('input', (e) => {
 
 
 fontSelector.addEventListener('change', (e) => {
+
     const font = e.target.value;
     document.documentElement.style.setProperty('--font-family', font);
     localStorage.setItem('fontFamily', font);
+
 });
 
 
 themeToggle.addEventListener('click', (e) => {
 
+    const theme = e.target.value;
+    document.documentElement.style.setProperty('', theme);
+    localStorage.setItem('bgColor', theme);
 
 });
 

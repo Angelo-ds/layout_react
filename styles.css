@@ -11,7 +11,7 @@
     padding: 0;
 }
 .page{
-
+    font-family: var(--font-family);
 }
 
 .header{
@@ -21,9 +21,15 @@
 .header__controls{
 
 }
+
 /* quando o body tiver a classe dark */
 body.dark{
     --text-color: #flflfl;
     --bg-color: #121212;
 }
 
+/* quando tiver a classe light */
+body.light{
+    --text-color: #121212;
+    --bg-color: #flflfl;
+}
