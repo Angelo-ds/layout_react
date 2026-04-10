@@ -8,7 +8,7 @@ const newsArticles = document.querySelectorAll('.news');
 
 const loadPreferences = () => {
 
-    const savedColor = localStorage.getitem('primaryColor');
+    const savedColor = localStorage.getItem('primaryColor');
     if(savedColor){
         document.documentElement.style.setProperty('--primary-color',savedColor);
         colorPicker.value = savedColor;
@@ -24,7 +24,7 @@ const loadPreferences = () => {
     };
 
 
-    const savedFont = localStorage.getitem('fontFamily');
+    const savedFont = localStorage.getItem('fontFamily');
     if (savedFont){
         document.documentElement.style.setProperty('--font-family',savedFont);
         fontSelector.value = savedFont;
@@ -34,7 +34,7 @@ const loadPreferences = () => {
 
 
 
-    const savedTheme = localStorage.getitem('theme');
+    const savedTheme = localStorage.getItem('theme');
     if(savedTheme  === 'dark'){
         body.classList.add('dark');
         themeToggle.textContent = 'light_mode';
