@@ -8,6 +8,39 @@ const newsArticles = document.querySelectorAll('.news');
 
 const loadPreferences = () => {
 
+    const savedColor = localStorage.getitem('primaryColor');
+    if(savedColor){
+        document.documentElement.style.setProperty('--primary-color',savedColor);
+        colorPicker.value = savedColor;
+    };
+
+    const savedArticleColor = localStorage.getItem('articleColor');
+
+    if (savedArticleColor){
+
+        newsArticles.forEach(article => {
+        article.style.backgroundColor = savedArticleColor;
+        });
+    };
+
+
+    const savedFont = localStorage.getitem('fontFamily');
+    if (savedFont){
+        document.documentElement.style.setProperty('--font-family',savedFont);
+        fontSelector.value = savedFont;
+
+    };
+
+
+
+
+    const savedTheme = localStorage.getitem('theme');
+    if(savedTheme  === 'dark'){
+        body.classList.add('dark');
+        themeToggle.textContent = 'light_mode';
+    };
+
+
 
 };
 
@@ -45,11 +78,11 @@ themeToggle.addEventListener('click', (e) => {
 
     body.classList.toggle('dark');
 
-    const isDark = body.classList.contains('dark');
+    const isDark = body.classList.contains('dark'); 
 
-    themeToggle.textContent = isDark ? 'dark_mode' : 'light_mode'
+    themeToggle.textContent = isDark ? 'dark_mode' : 'light_mode' //coloca dentro do span 
 
-    localStorage.setItem('theme',isDark ? 'dark' : 'light')
+    localStorage.setItem('theme',isDark ? 'dark' : 'light') // altera no loca storage
 
 
 
