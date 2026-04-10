@@ -6,7 +6,6 @@ const body = document.querySelector('body');
 const newsArticles = document.querySelectorAll('.news');
 
 
-
 const loadPreferences = () => {
 
 
@@ -44,9 +43,15 @@ fontSelector.addEventListener('change', (e) => {
 
 themeToggle.addEventListener('click', (e) => {
 
-    const theme = e.target.value;
-    document.documentElement.style.setProperty('', theme);
-    localStorage.setItem('bgColor', theme);
+    body.classList.toggle('dark');
+
+    const isDark = body.classList.contains('dark');
+
+    themeToggle.textContent = isDark ? 'dark_mode' : 'light_mode'
+
+    localStorage.setItem('theme',isDark ? 'dark' : 'light')
+
+
 
 });
 

@@ -24,12 +24,10 @@
 
 /* quando o body tiver a classe dark */
 body.dark{
-    --text-color: #flflfl;
+    --text-color: white;
     --bg-color: #121212;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 /* quando tiver a classe light */
-body.light{
-    --text-color: #121212;
-    --bg-color: #flflfl;
-}
