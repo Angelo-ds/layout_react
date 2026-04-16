@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.quadrado_esquerdo{
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    align-items: start;
+    flex-direction: column;
+    background-color: green;
+    height: 100vh;
+    width: 5vw;
+}
+
+.botao{
+    padding: 5px;
+    margin: 5px;
+}
