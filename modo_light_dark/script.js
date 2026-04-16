@@ -21,3 +21,27 @@
    
 
     // Armazena o novo tema no localStorage para que a preferência do usuário seja mantida
+
+const principal = document.querySelector('.principal');
+const botaoTema = document.querySelector('.botao');
+
+const loadPreferences = () => {
+    
+    if(localStorage.getItem('temaPg')){
+        principal.classList.add('dark')
+    };
+
+};
+
+botaoTema.addEventListener('click', (e) => {
+    principal.classList.toggle('dark')
+    if(principal.classList.contains('dark')){
+        localStorage.setItem('temaPg','dark')
+    }
+    else{
+        localStorage.removeItem('temaPg')
+    }
+
+})
+
+loadPreferences();
