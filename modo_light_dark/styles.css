@@ -19,7 +19,23 @@ body{
     width: 5vw;
 }
 
+.quadrado_direito{
+    height: 100vh;
+}
+
+.quadrado_direito h1{
+    margin: 10px 0px 20px 10px;
+
+}
+
+.quadrado_direito p{
+    margin: 10px 0px 20px 10px;
+
+}
+
+
 .botao{
     padding: 5px;
     margin: 5px;
 }
+
