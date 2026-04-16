@@ -1,92 +1,23 @@
-const colorPicker = document.querySelector('#color-picker');
-const fontSelector = document.querySelector('#font-select');
-const themeToggle = document.querySelector('#theme-toggle');
-const articleColorPicker = document.querySelector('#article-color-picker');
-const body = document.querySelector('body');
-const newsArticles = document.querySelectorAll('.news');
+// Evento que é disparado quando o conteúdo do DOM (estrutura HTML) é totalmente carregado
 
 
-const loadPreferences = () => {
+  // Verifica no localStorage se existe um tema salvo. Se não houver, define o tema padrão como 'light'
+ 
 
-    const savedColor = localStorage.getItem('primaryColor');
-    if(savedColor){
-        document.documentElement.style.setProperty('--primary-color',savedColor);
-        colorPicker.value = savedColor;
-    };
-
-    const savedArticleColor = localStorage.getItem('articleColor');
-
-    if (savedArticleColor){
-
-        newsArticles.forEach(article => {
-        article.style.backgroundColor = savedArticleColor;
-        });
-    };
+  // Adiciona a classe correspondente ao tema (light ou dark) no corpo da página (body)
 
 
-    const savedFont = localStorage.getItem('fontFamily');
-    if (savedFont){
-        document.documentElement.style.setProperty('--font-family',savedFont);
-        fontSelector.value = savedFont;
+  // Seleciona o botão de alternar tema usando o ID 'toggle-theme' e adiciona um evento de clique
+  
+    
+    // Verifica qual tema está atualmente aplicado no body (light ou dark)
+    // Se o tema for 'light', muda para 'dark', caso contrário, muda para 'light'
+    
 
-    };
+    // Remove as classes de tema antigas ('light' e 'dark') para evitar conflito
+   
 
+    // Adiciona a nova classe de tema ao body
+   
 
-
-
-    const savedTheme = localStorage.getItem('theme');
-    if(savedTheme  === 'dark'){
-        body.classList.add('dark');
-        themeToggle.textContent = 'light_mode';
-    };
-
-
-
-};
-
-
-colorPicker.addEventListener('input', (e) => {
-
-    const color = e.target.value;
-    document.documentElement.style.setProperty('--primary-color', color);
-    localStorage.setItem('primaryColor', color);
-    // o setitem tem como atributos o "key" e o "value", o key é o nome da propriedade que você quer salvar, e o value é o valor que você quer salvar, nesse caso, o valor do color picker.
-    //o setproperty é uma função do css que permite alterar o valor de uma variável css, nesse caso, a variável --primary-color, que é a cor primária do site, e o valor é o valor do color picker.
-});
-
-
-articleColorPicker.addEventListener('input', (e) => {
-    const color = e.target.value;
-    newsArticles.forEach(article => {
-        article.style.backgroundColor = color;
-    });
-    localStorage.setItem('articleColor', color);
-
-});
-
-
-fontSelector.addEventListener('change', (e) => {
-
-    const font = e.target.value;
-    document.documentElement.style.setProperty('--font-family', font);
-    localStorage.setItem('fontFamily', font);
-
-});
-
-
-themeToggle.addEventListener('click', (e) => {
-
-    body.classList.toggle('dark');
-
-    const isDark = body.classList.contains('dark'); 
-
-    themeToggle.textContent = isDark ? 'dark_mode' : 'light_mode' //coloca dentro do span 
-
-    localStorage.setItem('theme',isDark ? 'dark' : 'light') // altera no loca storage
-
-
-
-});
-
-loadPreferences();
-
+    // Armazena o novo tema no localStorage para que a preferência do usuário seja mantida
